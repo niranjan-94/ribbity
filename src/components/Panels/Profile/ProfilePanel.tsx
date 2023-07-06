@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "../../../styles/ProfilePanel.css";
 import ProfilePanelInfo from "./ProfilePanelInfo";
 import ProfilePanelNav from "./ProfilePanelNavbar";
@@ -269,7 +270,7 @@ const ProfilePanel = ({
 
   useEffect(() => {
     getUserRibbits();
-  }, [tab]);
+  }, [tab, getUserRibbits]);
 
   if (isLoading) return <LoadingPanel />;
   if (!visitedUserInfo || !visitedUserInfo.userHandle)
