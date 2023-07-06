@@ -56,6 +56,7 @@ const RibbitLikeButton = ({
     if (activeButton === "dislike" && isLiked) {
       handleLikeRibbit();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeButton]);
 
   return (

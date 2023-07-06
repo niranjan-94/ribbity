@@ -3,13 +3,7 @@ import "../../../styles/HomePanelRibbitInput.css";
 import { getProfilePicUrl } from "../../../scripts/firebaseHelperFns";
 import { useRef, useState, useEffect } from "react";
 import { getTimestamp, isValidString } from "../../../scripts/HelperFns";
-import {
-  DocumentReference,
-  addDoc,
-  collection,
-  doc,
-  setDoc,
-} from "firebase/firestore";
+import { DocumentReference, collection, doc, setDoc } from "firebase/firestore";
 import { db } from "../../../scripts/firebaseConfig";
 import { RibbitType, RibbityUser } from "../../../Ribbity.types";
 import { toast } from "react-hot-toast";

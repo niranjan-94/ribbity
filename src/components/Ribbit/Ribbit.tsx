@@ -51,7 +51,7 @@ const Ribbit = ({
   const [adjustedWidth, setAdjustedWidth] = useState<any>();
   const attachedImageRef: any = useRef();
 
-  const { handle, tab } = useParams();
+  const { tab } = useParams();
   const deleteRibbit = useDeleteRibbit({
     ribbitInfo,
     refreshRibbits: refreshRibbits,

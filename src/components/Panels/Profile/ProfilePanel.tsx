@@ -28,7 +28,6 @@ import {
   sortByTimeInSecondsDescending,
   sortRibbitsWithReRibbits,
 } from "../../../scripts/HelperFns";
-import WorkInProgress from "../../Misc/WorkInProgress";
 import InvalidRoutePanel from "../../Misc/InvalidRoutePanel";
 import Spinner from "../../Misc/Spinner";
 import LoadingPanel from "../../Misc/LoadingPanel";
@@ -242,7 +241,7 @@ const ProfilePanel = ({
     const unsub = onSnapshot(q, (snapshot: QuerySnap) => {
       if (tab === "likes " || tab === "replies" || tab === "media") return; // Assures we dont pull all ribbits into wrong tab
 
-      snapshot.docChanges().forEach((change) => {
+      snapshot.docChanges().forEach(change => {
         if (change.type === "added") {
           getUserFromUrlParam("no_load");
         }

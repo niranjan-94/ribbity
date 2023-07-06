@@ -64,6 +64,7 @@ const LongPopupNavbarMobile = ({
     return () => {
       window.removeEventListener("resize", handleResizeClose);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const popupRoot: HTMLElement | null = document.getElementById("popup-root");

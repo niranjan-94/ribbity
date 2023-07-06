@@ -73,6 +73,7 @@ const App = () => {
 
   useEffect(() => {
     initFirebaseAuth(authObserver);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadingHandler = (value: boolean) => {

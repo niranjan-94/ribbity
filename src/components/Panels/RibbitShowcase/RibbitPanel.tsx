@@ -27,7 +27,7 @@ interface RibbitPanelProps {
 }
 
 const RibbitPanel = ({ mainUser }: RibbitPanelProps) => {
-  const { handle, ribbitId } = useParams();
+  const { ribbitId } = useParams();
   const [ribbitInfo, setRibbitInfo] = useState<RibbitType>();
   const [comments, setComments] = useState<RibbitType[]>([]);
   const [parentRibbits, setParentRibbits] = useState<RibbitType[]>([]);
@@ -79,10 +79,10 @@ const RibbitPanel = ({ mainUser }: RibbitPanelProps) => {
     }
 
     const snapshots: DocumentSnapshot[] = await Promise.all(
-      queries.map((query) => getDoc(query))
+      queries.map(query => getDoc(query))
     );
 
-    snapshots.forEach((snapshot) => {
+    snapshots.forEach(snapshot => {
       if (snapshot.exists()) {
         const ribbit: RibbitType = snapshot.data() as RibbitType;
         ribbit.id = snapshot.id;
@@ -108,6 +108,7 @@ const RibbitPanel = ({ mainUser }: RibbitPanelProps) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     retrieveRibbitInfo();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ribbitId]);
   if (isLoading) return <LoadingPanel />;
   if (!ribbitInfo) return <InvalidRoutePanel />;

@@ -44,21 +44,22 @@ const ProfilePanelNavbar = () => {
       toSelectTab.classList.add("selected-tab-profile");
     }
     setSelectedTab(toSelectTab);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab]);
 
   return (
     <ul className="profile-panel-navbar-container">
-      <li onClick={(e) => handleTabSwitch(e, `/${handle}`)}>
+      <li onClick={e => handleTabSwitch(e, `/${handle}`)}>
         <div className=" ribbits-tab">Ribbits</div>
       </li>
-      <li onClick={(e) => handleTabSwitch(e, `/${handle}/replies`)}>
+      <li onClick={e => handleTabSwitch(e, `/${handle}/replies`)}>
         <div className="replies-tab">Replies</div>
       </li>
-      <li onClick={(e) => handleTabSwitch(e, `/${handle}/media`)}>
+      <li onClick={e => handleTabSwitch(e, `/${handle}/media`)}>
         <div className="media-tab">Media</div>
       </li>
 
-      <li onClick={(e) => handleTabSwitch(e, `/${handle}/likes`)}>
+      <li onClick={e => handleTabSwitch(e, `/${handle}/likes`)}>
         <div className="likes-tab">Likes</div>
       </li>
     </ul>
