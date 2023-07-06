@@ -126,6 +126,7 @@ const Home = ({ mainUser }: HomePanelProps) => {
     return () => {
       unsub();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFirstRender]);
 
   if (!mainUser) return null;
