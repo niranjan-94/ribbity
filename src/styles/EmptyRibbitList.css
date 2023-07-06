@@ -1,0 +1,23 @@
+@import url("AppCSSVariables.css");
+
+.empty-ribbit-list-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.empty-ribbit-list-wrapper div {
+  width: 350px;
+}
+
+.empty-ribbit-list-wrapper h1 {
+  margin: 0;
+}
+
+.empty-ribbit-list-wrapper p {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  margin-top: 8px;
+}

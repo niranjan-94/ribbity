@@ -1,0 +1,29 @@
+@import url("AppCSSVariables.css");
+
+#ribbit-option-reply-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+#ribbit-option-reply-wrapper .reply-count {
+  color: var(--secondary-text-color);
+  user-select: none;
+  position: absolute;
+  right: -8px;
+}
+
+.ribbit-option-icon-reply,
+.ribbit-option-icon {
+  padding: 8px;
+  border-radius: 50%;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all;
+  cursor: pointer;
+  pointer-events: auto;
+}

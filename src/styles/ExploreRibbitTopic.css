@@ -1,0 +1,52 @@
+@import url("AppCSSVariables.css");
+
+.explore-ribbit-topic-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.explore-ribbit-topic-container {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: 0.2s all;
+  cursor: pointer;
+  width: 100%;
+}
+
+.explore-ribbit-topic-wrapper:hover {
+  background-color: rgba(76, 76, 76, 0.137);
+}
+
+.explore-ribbit-topic-container .topic-title {
+  font-size: 16px;
+  color: var(--primary-text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.ribbit-topic-top svg {
+  height: 20px;
+  width: 20px;
+}
+
+.ribbit-topic-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topic-image {
+  width: 68px;
+  height: 68px;
+  border-radius: 12px;
+  margin-right: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,77 @@
+@import url("AppCSSVariables.css");
+.explore-panel-navbar-container {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  color: var(--secondary-text-color);
+  padding: 0;
+  align-items: center;
+
+  font-weight: 400;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 600px;
+  border-bottom: 1px solid var(--thin-border-color);
+  margin-bottom: 0;
+}
+
+.explore-panel-navbar-container div {
+  padding: 16px 0px;
+
+  font-size: 15px;
+  text-align: center;
+
+  pointer-events: none;
+}
+
+.explore-panel-navbar-container li {
+  padding: 0px 24px;
+  transition: 0.2s all;
+  width: 100%;
+  min-width: 56px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.explore-panel-navbar-container li:hover {
+  background-color: rgb(36, 36, 36);
+}
+
+.selected-tab {
+  position: relative;
+  font-weight: 600;
+  color: white;
+}
+
+.selected-tab:after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: -5%;
+  display: block;
+  background-color: var(--primary-color);
+  width: 110%;
+  height: 4px;
+  border-radius: 3px;
+}
+
+@media (max-width: 680px) {
+  .explore-panel-navbar-container {
+    overflow-x: auto;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .explore-panel-navbar-container {
+    overflow-x: auto;
+    padding-right: 12px;
+  }
+
+  .explore-panel-navbar-container::-webkit-scrollbar {
+    display: none;
+  }
+}

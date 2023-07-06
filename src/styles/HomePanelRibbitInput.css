@@ -1,0 +1,119 @@
+@import url("AppCSSVariables.css");
+
+.home-ribbit-input-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 16px;
+  padding-bottom: 8px;
+  gap: 12px;
+  border-bottom: 1px solid var(--thin-border-color);
+}
+
+.user-profile-image-home-input {
+  border-radius: 25px;
+  width: 48px;
+  height: 48px;
+  margin-top: 8px;
+}
+
+.media-option-icons svg {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+}
+
+#home-ribbit-input {
+  font-size: 20px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-top: 16px;
+  padding: 8px 0px;
+  color: var(--primary-text-color);
+  font-family: "Chirp";
+  font-weight: 300;
+  resize: none;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-ribbit-right-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  gap: 18px;
+}
+
+.home-ribbit-buttom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.media-option-icons {
+  display: flex;
+  flex-direction: row;
+  margin-left: -8px;
+}
+
+.ribbit-input-submit-button {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+  padding: 8px 0px;
+  width: 80px;
+  margin-left: 40px;
+  border-radius: 36px;
+  font-weight: 700;
+  font-size: 16px;
+
+  cursor: pointer;
+  border: none;
+}
+
+.media-option-icon {
+  border-radius: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+/*Media input styles */
+
+.home-ribbit-input-container .attached-home-media-preview-wrapper {
+  position: relative;
+}
+
+.home-ribbit-input-container .delete-home-attached-media {
+  box-sizing: border-box;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(32, 32, 32, 0.82);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.home-ribbit-input-container .delete-home-attached-media svg {
+  width: 18px;
+  height: 18px;
+}
+
+.home-ribbit-input-container .delete-home-attached-media svg path {
+  fill: #fff;
+}
+
+.home-ribbit-input-container .attached-home-media-preview {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.media-option-icon:hover {
+  background-color: rgba(67, 107, 79, 0.231);
+}

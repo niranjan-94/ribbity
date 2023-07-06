@@ -1,0 +1,45 @@
+.profile-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.profile-action-button {
+  border-radius: 50%;
+  border: solid 1px rgb(74, 89, 101);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.profile-action-button svg {
+  height: 20px;
+  width: 20px;
+}
+
+.follow-user-button {
+  border: none;
+}
+
+.follow-user-button,
+.unfollow-user-button {
+  color: black;
+  background-color: #eff3f4;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px 17px;
+  font-size: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  min-width: 108px;
+  max-height: 40px;
+  min-height: 40px;
+}
+
+.unfollow-user-button:hover {
+  background-color: rgba(255, 0, 0, 0.104);
+  color: red;
+  border: 1px solid red;
+}

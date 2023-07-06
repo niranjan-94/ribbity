@@ -1,0 +1,60 @@
+@import url("AppCSSVariables.css");
+
+.profile-panel-navbar-container {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  color: var(--secondary-text-color);
+  padding: 0;
+  align-items: center;
+  width: 100%;
+
+  font-weight: 400;
+
+  border-bottom: 1px solid var(--thin-border-color);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.profile-panel-navbar-container li {
+  transition: 0.2s all;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  flex: 1;
+}
+
+.profile-panel-navbar-container div {
+  padding: 20px 0px;
+
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+  height: 100%;
+  pointer-events: none;
+}
+
+.profile-panel-navbar-container li:hover {
+  background-color: rgb(17, 17, 17);
+}
+
+.selected-tab-profile {
+  position: relative;
+  font-weight: 600;
+  color: white;
+}
+
+.selected-tab-profile:after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: -15%;
+  display: block;
+  background-color: var(--primary-color);
+  width: 130%;
+  height: 4px;
+  border-radius: 3px;
+}

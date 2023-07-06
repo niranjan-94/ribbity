@@ -1,0 +1,255 @@
+@import url("AppCSSVariables.css");
+
+.ribbit-panel-display-container {
+  box-sizing: border-box;
+  padding-right: 12px;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 10px;
+  border-bottom: 0.5px solid var(--thin-border-color);
+  position: relative;
+}
+
+.ribbit-panel-display-container .header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.ribbit-panel-display-container .header svg {
+  width: 19px;
+  height: 19px;
+}
+
+.ribbit-panel-display-container .text {
+  font-weight: 300;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.ribbit-panel-display-container .attached-ribbit-image {
+  box-sizing: border-box;
+  width: 99%;
+  border-radius: 16px;
+  margin-top: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.388);
+}
+
+.ribbit-panel-display-container .user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ribbit-panel-display-container .user-info .user-name {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.ribbit-panel-display-container .user-info .user-handle {
+  font-weight: lighter;
+  font-size: 15px;
+  color: var(--secondary-text-color);
+}
+
+.ribbit-panel-display-container .user-info img,
+.ribbit-reply-user-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.ribbit-panel-display-container .more-button {
+  padding: 6px;
+  transition: 0.2s all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 0px;
+  height: fit-content;
+}
+
+.ribbit-panel-display-container .date-posted {
+  color: var(--secondary-text-color);
+}
+
+.ribbit-panel-display-container .more-button:hover {
+  background-color: #07280d9f;
+}
+
+.ribbit-panel-display-container .more-button:hover svg .ribbit-path {
+  transition: 0.3s all;
+  fill: var(--primary-color);
+}
+
+.ribbit-panel-display-container .action-buttons {
+  display: flex;
+  justify-content: space-around;
+  border-top: 0.5px solid var(--thin-border-color);
+  border-bottom: 0.5px solid var(--thin-border-color);
+  padding: 4px 0px;
+}
+
+.ribbit-panel-display-container .action-buttons svg {
+  width: 23px;
+  height: 23px;
+}
+
+.ribbit-panel-display-container .action-button-wrapper {
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+  transition: 0.2s all;
+
+  cursor: pointer;
+}
+
+.ribbit-panel-display-container .action-button-wrapper:hover {
+  background-color: #38802a34;
+}
+
+.ribbit-panel-display-container .action-button-wrapper:hover path {
+  transition: 0.2s all;
+  fill: var(--primary-color);
+}
+
+.ribbit-panel-display-container .reribbit-action-button:hover path {
+  fill: rgb(0, 194, 194);
+}
+
+.ribbit-panel-display-container .reribbit-action-button:hover {
+  background-color: rgba(0, 152, 152, 0.108);
+}
+
+/* Reply input form styles */
+
+.ribbit-reply-form {
+  padding-bottom: 8px;
+}
+
+.ribbit-reply-form .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ribbit-reply-form .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ribbit-reply-form button {
+  border-radius: 24px;
+  padding: 6px 16px;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  font-size: 16px;
+  width: 75px;
+  height: 35px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.reply-form-left-side {
+  display: flex;
+
+  gap: 12px;
+  width: 100%;
+}
+
+.reply-form-left-side #ribbit-reply-input {
+  background-color: transparent;
+  border: none;
+  font-size: 21px;
+  color: var(--primary-text-color);
+  outline: none;
+
+  font-family: "Chirp";
+  font-weight: 300;
+  resize: none;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.reply-form-left-side #ribbit-reply-input::placeholder {
+  color: #71767b;
+}
+
+.ribbit-reply-form .media-options-group {
+  display: flex;
+  margin-left: 54px;
+}
+
+.media-option {
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: fit-content;
+  transition: 0.2s all;
+
+  margin-bottom: -8px;
+}
+
+.ribbit-reply-form .attached-media-preview {
+  width: 99%;
+  border-radius: 16px;
+}
+
+.ribbit-reply-form .attached-media-preview-wrapper {
+  position: relative;
+}
+
+.ribbit-reply-form .delete-attached-media {
+  box-sizing: border-box;
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(32, 32, 32, 0.82);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.ribbit-reply-form .delete-attached-media svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ribbit-reply-form .delete-attached-media svg path {
+  fill: #fff;
+}
+
+.media-option:hover {
+  background-color: rgba(3, 190, 3, 0.137);
+}
+
+.ribbit-reply-form svg {
+  width: 20px;
+  height: 20px;
+}

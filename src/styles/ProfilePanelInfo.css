@@ -1,0 +1,141 @@
+@import url("AppCSSVariables.css");
+
+:root {
+  --viewport-width: 100vw;
+}
+
+.profile-panel-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+
+  cursor: default;
+}
+
+.profile-info-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+.profile-info-top img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 130px;
+}
+
+.edit-profile-button {
+  color: white;
+  border-radius: 24px;
+  border-color: rgb(82, 99, 112);
+  border-width: 1px;
+  background-color: transparent;
+  font-size: 15px;
+  height: 36px;
+  font-weight: 600;
+  padding: 8px 16px;
+  outline: none;
+  border-style: solid;
+  cursor: pointer;
+}
+.profile-img-wrapper {
+  box-sizing: border-box;
+  background-color: black;
+  padding: 4px;
+  margin-top: -15%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 25%;
+}
+
+.profile-panel-info-container h1 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.profile-panel-info-container p {
+  margin: 0;
+}
+
+.profile-panel-info-container .user-name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.profile-panel-info-container .user-handle {
+  color: var(--secondary-text-color);
+  margin-bottom: 16px;
+}
+.profile-panel-info-container .user-bio {
+  margin-bottom: 12px;
+}
+
+.profile-panel-info-container .user-join-date,
+.profile-panel-info-container .user-location {
+  margin-bottom: 16px;
+  color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.profile-panel-info-container .user-join-date svg,
+.profile-panel-info-container .user-location svg {
+  width: 19px;
+  height: 19px;
+  margin-right: 4px;
+}
+
+.profile-panel-info-container .user-following-nums {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+  display: flex;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.profile-panel-info-container .user-following-nums a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-text-color);
+}
+
+.user-bio {
+  color: var(--primary-text-color);
+}
+
+.verified-icon {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.verified-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.misc-user-info {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 700px) {
+  .profile-info-top img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-img-wrapper {
+    padding: 2px;
+  }
+}

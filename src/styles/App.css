@@ -1,0 +1,118 @@
+.main-app-continer {
+  display: flex;
+
+  position: relative;
+
+  justify-content: center;
+}
+
+.loading-user {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+}
+
+.loading-user svg {
+  height: 200px;
+  height: 200px;
+}
+
+.cls-1 {
+  fill: #fff;
+}
+
+.cls-2 {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 10px;
+}
+
+@media (max-width: 1280px) {
+  .profile-panel-container,
+  .explore-panel-container,
+  .home-panel-container,
+  .loading-panel-wrapper,
+  .user-follow-panel,
+  .ribbit-panel-container,
+  .invalid-route-panel-container {
+    margin-left: 15px !important;
+    margin-right: 20px !important;
+  }
+}
+
+@media (max-width: 1025px) {
+  .profile-panel-container,
+  .explore-panel-container,
+  .home-panel-container,
+  .loading-panel-wrapper,
+  .user-follow-panel,
+  .ribbit-panel-container,
+  .invalid-route-panel-container {
+    margin-left: 10px !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .profile-panel-container,
+  .explore-panel-container,
+  .home-panel-container,
+  .loading-panel-wrapper,
+  .user-follow-panel,
+  .ribbit-panel-container,
+  .invalid-route-panel-container {
+    margin-right: 0px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-panel-container,
+  .explore-panel-container,
+  .home-panel-container,
+  .loading-panel-wrapper,
+  .user-follow-panel,
+  .ribbit-panel-container,
+  .invalid-route-panel-container {
+    max-width: auto;
+  }
+}
+
+@media (max-width: 615px) {
+  .profile-panel-container,
+  .explore-panel-container,
+  .home-panel-container,
+  .loading-panel-wrapper,
+  .user-follow-panel,
+  .ribbit-panel-container,
+  .invalid-route-panel-container {
+    margin-left: 5px !important;
+  }
+
+  .main-left-section {
+    margin-left: 7px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-panel-container,
+  .explore-panel-container,
+  .home-panel-container,
+  .loading-panel-wrapper,
+  .user-follow-panel,
+  .ribbit-panel-container,
+  .invalid-route-panel-container {
+    margin-left: 0px !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+  .main-bottom-nav-mobile-container {
+    display: block !important;
+  }
+  .ribbit-button-mobile-container {
+    display: block !important;
+  }
+}

@@ -1,0 +1,104 @@
+@import url("AppCSSVariables.css");
+
+.profile-panel-container {
+  height: 100%;
+  border-left: 0.5px solid var(--thin-border-color);
+  border-right: 0.5px solid var(--thin-border-color);
+
+  width: 100%;
+
+  color: var(--primary-text-color);
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  transition: all 0.6s ease-out;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.profile-panel-top-header {
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  max-width: 600px;
+  backdrop-filter: blur(11px);
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+
+  height: 53px;
+  gap: 24px;
+  padding-left: 8px;
+  z-index: 5;
+}
+
+.profile-panel-top-header .back-arrow {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  transition: 0.2s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.profile-panel-top-header .back-arrow:hover {
+  background-color: rgb(23, 23, 23);
+}
+.profile-panel-top-header .back-arrow svg {
+  height: 20px;
+  width: 20px;
+}
+
+.username-ribbit-count {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.username-ribbit-count h1 {
+  font-size: 20px;
+}
+
+.username-ribbit-count p {
+  font-size: 14px;
+  color: var(--secondary-text-color);
+}
+
+.username-ribbit-count h1,
+.username-ribbit-count p {
+  margin: 0;
+  padding: 0;
+}
+
+.username-ribbit-count .username-profile-top-group {
+  display: grid;
+  align-items: center;
+  gap: 2px;
+  grid-template-columns: fit-content(100%) auto;
+  padding-right: 16px;
+}
+
+.username-ribbit-count .username-profile-top-group .user-name {
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.user-banner {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 200px;
+
+  background-color: rgb(0, 0, 0);
+  margin-top: 53px;
+}
+
+.user-ribbit-feed {
+  margin-bottom: 50vh;
+}

@@ -1,0 +1,231 @@
+@import url("AppCSSVariables.css");
+
+.ribbit-popup-input-container {
+  box-sizing: border-box;
+  color: var(--primary-color);
+  position: fixed;
+  background-color: var(--transparent-background-color);
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.ribbit-popup-input-wrapper {
+  width: 575px;
+  background-color: var(--popup-background-color);
+
+  height: fit-content;
+  border-radius: 16px;
+  padding: 0px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 310px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.ribbit-popup-input-wrapper svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ribbit-popup-input-wrapper .backout-button {
+  width: min-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 8px 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  background-color: transparent;
+  border: none;
+}
+
+.ribbit-popup-input-wrapper .backout-button:hover {
+  background-color: rgb(30, 30, 30);
+}
+
+.ribbit-popup-input-main {
+  display: flex;
+  padding: 0px 6px;
+  height: 100%;
+  gap: 12px;
+}
+.popup-input-main-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  position: relative;
+}
+
+.popup-input-main-right .inputs-group:has(.spinner) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-input-main-right .spinner {
+}
+
+.ribbit-popup-input-main .user-profile-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.ribbit-popup-input-main .attached-media-preview-wrapper {
+  position: relative;
+}
+
+.ribbit-popup-input-main .delete-attached-media svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ribbit-popup-input-main .delete-attached-media svg path {
+  fill: #fff;
+}
+
+.ribbit-popup-input-main .delete-attached-media {
+  box-sizing: border-box;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(32, 32, 32, 0.82);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ribbit-popup-input-main .attached-media-preview {
+  width: 100%;
+  border-radius: 16px;
+}
+
+#ribbit-popup-input {
+  background-color: transparent;
+
+  flex: 1;
+  color: var(--primary-text-color);
+  font-size: 21px;
+  outline: none;
+  resize: none;
+  font-family: "Chirp";
+  border: none;
+  font-weight: 300;
+  padding-left: 8px;
+  overflow: hidden;
+  width: 99%;
+}
+
+.popup-bottom-row {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 1px rgb(47, 51, 54);
+  padding-top: 4px;
+}
+
+.popup-bottom-row svg {
+  width: 20px;
+  height: 20px;
+}
+.popup-media-option-icons {
+  display: flex;
+  gap: 2px;
+  margin-left: 8px;
+}
+
+.popup-media-option-icon svg path {
+  fill: var(--primary-color);
+}
+
+.popup-media-option-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-media-option-icon:hover {
+  background-color: #1df05920;
+}
+
+.popup-bottom-row .ribbit-button {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  border-radius: 16px;
+  font-weight: 700;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.ribbit-reply-status {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  gap: 4px;
+  padding: 4px 12px;
+  margin: 12px 0px;
+  width: fit-content;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.ribbit-reply-status:hover {
+  background-color: #1df03221;
+}
+
+.ribbit-reply-status svg path {
+  fill: var(--primary-color);
+}
+
+.ribbit-reply-status svg {
+  width: 14px;
+  height: 14px;
+}
+
+.popup-input-length {
+  color: var(--primary-color);
+  font-size: 12px;
+}
+
+.popup-bottom-right-button {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.popup-input-main-right .bottom-half {
+}
+
+@media (max-width: 700px) {
+  .ribbit-popup-input-container {
+    background-color: black;
+    padding-top: 10px;
+    overflow-x: hidden;
+  }
+}

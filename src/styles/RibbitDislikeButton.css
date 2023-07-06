@@ -1,0 +1,55 @@
+@import url("AppCSSVariables.css");
+
+#ribbit-option-dislike-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  border: none;
+
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.ribbit-option-icon-dislike {
+  padding: 8px 8px;
+  border-radius: 50%;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+#ribbit-option-dislike-wrapper:hover svg path {
+  fill: #bb731b;
+}
+
+#ribbit-option-dislike-wrapper:hover .dislikes-count {
+  color: #bb731b;
+}
+
+#ribbit-option-dislike-wrapper:hover .ribbit-option-icon {
+  background-color: #bb731b1c;
+}
+
+#ribbit-option-dislike-wrapper .dislikes-count {
+  color: var(--secondary-text-color);
+  user-select: none;
+
+  transition: 0.2s all;
+  pointer-events: all;
+
+  position: absolute;
+  top: 25%;
+}
+
+.disliked {
+  color: #bb731b !important;
+}

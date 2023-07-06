@@ -1,0 +1,315 @@
+@import url("AppCSSVariables.css");
+
+p {
+  margin: 0;
+  padding: 0;
+}
+header {
+  padding: 0;
+  margin: 0;
+}
+.ribbit-container {
+  box-sizing: border-box;
+
+  padding: 12px;
+
+  padding-bottom: 5px;
+  font-size: 15px;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  cursor: pointer;
+  transition: 0.2s all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+
+  transition: all 0.6s ease-out;
+  overflow: hidden;
+}
+
+.ribbit-container-main {
+  display: flex;
+
+  gap: 12px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--thin-border-color);
+}
+
+.ribbit-container:hover {
+  background-color: rgb(8, 8, 8);
+}
+
+.ribbit-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: -5px;
+  margin-top: -5px;
+  width: 100%;
+  max-width: 600px;
+
+  flex-shrink: 1;
+}
+
+.ribbit-container .user-profile-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.ribbit-container .attached-ribbit-image {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  border-radius: 16px;
+  width: 99%;
+  border: 1px solid rgba(85, 85, 85, 0.432);
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.ribbit-container .threaded-profile-img {
+  position: relative;
+}
+
+.ribbit-container .threaded-profile-img::after {
+  content: "";
+  position: absolute !important;
+  background-color: rgb(99, 99, 99);
+  width: 1px;
+  height: calc(var(--distance) - 5px);
+  bottom: 0px;
+  top: 52px;
+  left: 24px;
+  z-index: 10;
+}
+
+.ribbit-container svg {
+  height: 19px;
+  width: 19px;
+}
+
+.ribbit-container-right-side {
+  flex: 1;
+  pointer-events: none;
+}
+
+.more-icon-wrapper {
+  width: fit-content;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  pointer-events: auto;
+  transition: 0.2s all;
+
+  background-color: transparent;
+  border: none;
+}
+
+.more-icon-wrapper:hover {
+  background-color: rgba(55, 209, 119, 0.159);
+}
+
+.more-icon-wrapper:hover .ribbit-path {
+  fill: var(--primary-color);
+}
+.ribbit-icon-button-row {
+  display: flex;
+  justify-content: space-between;
+  max-width: 450px;
+  margin-left: -8px;
+}
+
+.ribbit-main-text {
+  margin-bottom: 6px;
+  font-weight: 300;
+}
+.grey {
+  color: rgb(100, 104, 109);
+}
+
+.header-user-names {
+  cursor: pointer;
+  pointer-events: auto;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: fit-content(100%) fit-content(100%) auto auto;
+  gap: 4px;
+}
+
+.header-user-names.verified {
+  grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%) auto auto !important;
+}
+
+.header-user-names svg {
+  width: 19px;
+  height: 19px;
+}
+
+.header-user-names .username {
+  font-weight: 600;
+
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.header-user-names .userhandle {
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+
+  white-space: nowrap;
+}
+
+.header-user-names .date-posted {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.header-user-names .username:hover {
+  text-decoration: underline;
+}
+
+.ribbit-option-icon,
+.ribbit-option-icon-heart,
+.ribbit-option-icon-retweet {
+  padding: 8px;
+  border-radius: 50%;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all;
+  cursor: pointer;
+  pointer-events: auto;
+}
+path {
+  transition: 0.2s all;
+}
+
+.ribbit-option-icon:hover svg path {
+  fill: var(--primary-color);
+}
+
+.copy-option-icon:hover {
+  background-color: rgba(25, 96, 55, 0.258);
+}
+
+.copy-option-icon {
+  background-color: transparent;
+  border: none;
+
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#ribbit-option-heart-wrapper:hover svg path {
+  fill: rgb(194, 20, 101);
+}
+
+.ribbit-option-icon-heart:hover {
+  background-color: #200914;
+}
+
+#ribbit-option-heart-wrapper,
+#ribbit-option-reply-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  position: relative;
+  pointer-events: all;
+  border-radius: 50%;
+
+  background-color: transparent;
+  border: none;
+
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#ribbit-option-reply-wrapper:hover .ribbit-option-icon {
+  background-color: rgba(25, 96, 55, 0.258);
+}
+
+#ribbit-option-reply-wrapper:hover svg path {
+  fill: var(--primary-color);
+}
+
+#ribbit-option-reply-wrapper:hover .reply-count {
+  color: var(--primary-color);
+}
+
+#ribbit-option-heart-wrapper .likes-count {
+  top: 8px;
+}
+
+#ribbit-option-heart-wrapper .likes-count,
+#ribbit-option-reply-wrapper .reply-count {
+  color: var(--secondary-text-color);
+  user-select: none;
+
+  transition: 0.2s all;
+}
+
+#ribbit-option-reply-wrapper .reply-count {
+  position: absolute;
+  top: 25%;
+  left: 105%;
+}
+
+.liked {
+  color: #f91880 !important;
+}
+
+a {
+  color: inherit;
+}
+
+.replying-to-text {
+  color: var(--secondary-text-color);
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.replying-to-handle {
+  color: var(--link-text-color);
+  pointer-events: auto;
+}
+
+.replying-to-handle:hover {
+  text-decoration: underline;
+}
+
+.ribbit-container .reribbited-top-info {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 8px;
+  margin-left: 36px;
+  margin-top: -6px;
+}
+
+.ribbit-container .reribbited-top-info svg {
+  width: 16px;
+  height: 16px;
+}
+
+.ribbit-container .reribbited-top-info svg path {
+  fill: var(--secondary-text-color);
+}

@@ -1,0 +1,17 @@
+@import url("AppCSSVariables.css");
+
+.whats-happening-container {
+  background-color: var(--secondary-color);
+  color: var(--primary-text-color);
+  border-radius: 16px;
+  height: auto;
+
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.whats-happening-container h1 {
+  margin: 0;
+  font-size: 20px;
+  padding: 12px 16px;
+}

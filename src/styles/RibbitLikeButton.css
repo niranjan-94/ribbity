@@ -1,0 +1,67 @@
+@import url("AppCSSVariables.css");
+
+.ribbit-option-icon,
+.ribbit-option-icon-heart {
+  padding: 8px;
+  border-radius: 50%;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all;
+  cursor: pointer;
+  pointer-events: auto;
+}
+path {
+  transition: 0.2s all;
+}
+
+.ribbit-option-icon-heart:hover svg path {
+  fill: rgb(194, 20, 101);
+}
+
+#ribbit-option-heart-wrapper:hover .ribbit-option-icon {
+  border-radius: 50%;
+  background-color: #200914;
+}
+
+#ribbit-option-heart-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  border: none;
+
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#ribbit-option-heart-wrapper:hover .likes-count {
+  color: rgb(194, 20, 101);
+}
+
+#ribbit-option-heart-wrapper .likes-count {
+  pointer-events: all;
+  transition: 0.2s all;
+  width: 10px;
+  display: block;
+}
+
+#ribbit-option-heart-wrapper .likes-count {
+  color: var(--secondary-text-color);
+  user-select: none;
+  position: absolute;
+  top: 25%;
+}
+
+.liked {
+  color: #f91880 !important;
+}
+
+a {
+  color: inherit;
+}

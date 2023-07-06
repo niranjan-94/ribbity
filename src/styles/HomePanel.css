@@ -1,0 +1,37 @@
+@import url("AppCSSVariables.css");
+
+.home-panel-container {
+  height: 100%;
+  border-left: 1px solid var(--thin-border-color);
+  border-right: 1px solid var(--thin-border-color);
+
+  color: var(--primary-text-color);
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  padding-bottom: 90vh;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.home-panel-header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  max-width: 600px;
+  backdrop-filter: blur(11px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home-panel-main-feed {
+  margin-top: 100px;
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (max-width: 1285px) {
+  .home-panel-container {
+    margin-left: 18px;
+  }
+}

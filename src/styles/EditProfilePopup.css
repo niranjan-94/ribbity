@@ -1,0 +1,297 @@
+@import url("AppCSSVariables.css");
+
+.edit-profile-popup-container {
+  position: fixed;
+  background-color: var(--transparent-background-color);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Chirp";
+}
+
+.edit-profile-popup {
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  height: 650px;
+  background-color: var(--popup-background-color);
+  border-radius: 18px;
+
+  position: relative;
+}
+
+.edit-profile-popup header {
+  height: 53px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 16px;
+  justify-content: space-between;
+}
+
+.edit-profile-popup h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.edit-profile-popup svg {
+  width: 20px;
+  height: 20px;
+}
+
+.edit-profile-popup .backout-button {
+  transition: 0.2s all;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: transparent;
+  border: none;
+}
+
+.edit-profile-popup .backout-button:hover {
+  background-color: rgba(29, 29, 29, 0.73);
+}
+
+.save-edit-profile-button {
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  padding: 9px 18px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s all;
+  color: black;
+}
+
+.save-edit-profile-button:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.current-user-banner {
+  padding: 0px 2px;
+  position: relative;
+}
+
+.current-user-banner img {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 596px;
+  height: 100%;
+  max-height: 200px;
+}
+
+.current-user-profile-image {
+  position: absolute;
+  margin-top: -12%;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  left: 16px;
+  width: 23%;
+  max-width: fit-content;
+}
+
+.current-user-profile-image img {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 50%;
+}
+
+.edit-profile-inputs {
+  margin: 84px 12px;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.edit-profile-input-div {
+  width: 100%;
+  border-radius: 4px;
+
+  border: 1px solid rgb(51, 54, 57);
+  background-color: black;
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  position: relative;
+}
+
+.edit-profile-input-div.bio-input-div {
+  height: 100px;
+}
+
+.edit-profile-input-div:focus-within {
+  border-color: var(--primary-color);
+}
+
+.edit-profile-input-div:focus-within label,
+.edit-profile-input-div:focus-within label {
+  color: var(--primary-color);
+}
+
+.edit-profile-input-div:focus-within.invalid-input label {
+  color: red;
+}
+
+.edit-profile-inputs input,
+.edit-profile-inputs textarea {
+  font-family: "Chirp";
+  margin: 0;
+  width: 95%;
+  color: white;
+  background-color: black;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 18px;
+}
+
+.edit-profile-inputs textarea {
+  margin-top: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+.edit-profile-inputs label {
+  font-weight: 300;
+  transition: 0.2s all;
+  position: absolute;
+  left: 9px;
+  font-size: 14px;
+  top: 15%;
+  color: rgb(95, 100, 106);
+}
+
+.edit-profile-inputs .invalid-input label {
+  color: red;
+}
+
+.bio-input-div label {
+  top: 9%;
+}
+
+.edit-profile-inputs input:placeholder-shown:not(:focus) + label {
+  color: rgb(103, 105, 103);
+  font-size: 18px;
+  top: 30%;
+}
+
+.edit-profile-inputs textarea:placeholder-shown:not(:focus) + label {
+  color: rgb(103, 105, 103);
+  font-size: 18px;
+  top: 15%;
+}
+
+.invalid-input .edit-profile-input-div {
+  border-color: red !important;
+}
+
+.invalid-input .edit-profile-input-div + label {
+  color: red !important;
+}
+
+.invalid-input::after {
+  color: red;
+  content: "Name can't be blank";
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.invalid-save-button {
+  cursor: default;
+  background-color: rgb(148, 148, 148);
+}
+
+.invalid-save-button:hover {
+  background-color: rgb(148, 148, 148);
+}
+/*Custom file input styles */
+
+.image-file-upload,
+.banner-file-upload {
+  padding: 12px 12px;
+  border-radius: 50%;
+
+  color: white;
+  background-color: rgba(13, 13, 13, 0.321);
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s all;
+}
+
+.image-file-upload:hover,
+.banner-file-upload:hover {
+  background-color: rgba(56, 56, 56, 0.321);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.profile-image-input-container {
+  position: absolute;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.276);
+}
+
+.profile-banner-input-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.276);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  width: 100%;
+  max-width: 596px;
+  height: 100%;
+  max-height: 200px;
+}
+
+.edit-profile-popup .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Media Queries */
+
+@media (max-width: 700px) {
+  .edit-profile-popup-container {
+    background-color: black;
+    align-items: start;
+  }
+
+  .edit-profile-popup {
+    height: 100vh;
+  }
+}

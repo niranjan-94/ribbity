@@ -1,0 +1,23 @@
+@import url("AppCSSVariables.css");
+
+.misc-links-container {
+  color: var(--secondary-text-color);
+  width: 100%;
+  max-width: 350px;
+  font-size: 14px;
+
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.misc-links-container span {
+  font-weight: 100;
+  padding-right: 12px;
+  cursor: pointer;
+}
+
+.misc-links-container span:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,72 @@
+@import url("AppCSSVariables.css");
+
+.delete-ribbit-popup-container {
+  box-sizing: border-box;
+  color: var(--primary-text-color);
+  position: fixed;
+  background-color: var(--transparent-background-color);
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-ribbit-popup-wrapper {
+  box-sizing: border-box;
+  height: 300px;
+  width: 320px;
+  padding: 32px;
+  background-color: var(--popup-background-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.delete-confirm-buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  margin-top: 8px;
+}
+
+.delete-ribbit-popup-wrapper h1 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.delete-ribbit-popup-wrapper p {
+  line-height: 1.3;
+}
+
+.delete-ribbit-popup-wrapper button {
+  width: 100%;
+  flex: 1;
+  font-weight: bold;
+  color: white;
+  border-radius: 36px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-ribbit-popup-wrapper .delete-confirm {
+  background-color: rgb(244, 33, 46);
+  border: none;
+}
+
+.delete-ribbit-popup-wrapper .delete-cancel {
+  background-color: transparent;
+  border: 1px solid var(--thin-border-color);
+}
+
+.delete-confirm-text {
+  font-size: 15px;
+  color: var(--secondary-text-color);
+}

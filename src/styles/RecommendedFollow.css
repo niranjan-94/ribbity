@@ -1,0 +1,58 @@
+@import url("AppCSSVariables.css");
+
+.recommended-follow-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  transition: all 0.2s;
+}
+
+.recommended-follow-container:hover {
+  background-color: rgba(76, 76, 76, 0.137);
+}
+
+.recommended-follow-container .left-side {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.recommended-user-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+.recommended-follow-names {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  padding-right: 12px;
+}
+
+.recommended-follow-names .user-name {
+  display: grid;
+  align-items: center;
+  grid-template-columns: fit-content(100%) auto;
+  gap: 3px;
+}
+
+.recommended-follow-names .user-name span {
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.recommended-follow-names .user-name svg {
+  width: 19px;
+  height: 19px;
+}
+
+.recommended-follow-names p:first-child {
+  font-weight: bold;
+}
+.recommended-follow-names p:last-child {
+  color: var(--secondary-text-color);
+}
